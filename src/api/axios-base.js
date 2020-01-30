@@ -1,5 +1,5 @@
 import axios from 'axios'
-const APIUrl = 'http://pego149.pythonanywhere.com/'
+const APIUrl = 'https://pego149.pythonanywhere.com/'
 
 const axiosBase = axios.create({
   baseURL: APIUrl,

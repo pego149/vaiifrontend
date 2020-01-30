@@ -80,14 +80,14 @@
     },
     methods: {
       fetchData() {
-        axios.get('api/messages/' + this.$route.params.id + "/" + this.$store.getters.loggedInId)
+        axios.get('https://pego149.pythonanywhere.com/api/messages/' + this.$route.params.id + "/" + this.$store.getters.loggedInId)
           .then((resp) => {
             this.spravy = resp.data
             this.getUsername()
           })
       },
       odosliSpravu() {
-        axios.post('api/messages/', {
+        axios.post('https://pego149.pythonanywhere.com/api/messages/', {
           odosielatel: this.$store.getters.loggedInUsername,
           prijmatel: this.other,
           sprava: this.sprava

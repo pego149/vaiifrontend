@@ -38,7 +38,7 @@
     methods: {
       odosliSpravu() {
         let me = this;
-        axios.post('api/messages/', {
+        axios.post('https://pego149.pythonanywhere.com/api/messages/', {
           odosielatel: this.$store.getters.loggedInUsername,
           prijmatel: this.prijmatel,
           sprava: this.sprava

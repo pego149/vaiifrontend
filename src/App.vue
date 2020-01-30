@@ -2,9 +2,9 @@
     <div>
         <v-app>
             <v-navigation-drawer v-model="drawer" :clipped="$vuetify.breakpoint.lgAndUp" v-on:input="startInterval" app>
-                <v-img v-if="accessToken!=null" :aspect-ratio="16/9" :src="photo">
+                <v-img v-if="accessToken!=null" :aspect-ratio="16/9" :src="'https://pego149.pythonanywhere.com/' + photo">
                     <v-row align="end" class="lightbox white--text pa-2 fill-height">
-                        <v-col>
+                        <v-col class="side">
                             <div class="subheading">{{ first_name }} {{ last_name }}</div>
                             <div class="body-1">{{ username }}</div>
                         </v-col>
@@ -124,7 +124,7 @@
                             <v-list>
                                 <v-list-item>
                                     <v-list-item-avatar>
-                                        <img :src=photo alt="profile">
+                                        <img :src="'https://pego149.pythonanywhere.com/' + photo" alt="profile">
                                     </v-list-item-avatar>
                                     <v-list-item-content>
                                         <v-list-item-title>{{ username }}</v-list-item-title>
@@ -239,5 +239,12 @@
 <style>
     .meno {
         margin-top: 4px;
+    }
+    .side {
+        color: #000000;
+        font-weight: bolder;
+        background-color: #ffffff !important;
+        opacity: 0.65;
+        border-color: transparent!important;
     }
 </style>

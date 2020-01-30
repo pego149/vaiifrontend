@@ -53,13 +53,13 @@
     },
     methods: {
       fetchData() {
-        axios.get('api/miestnost/' + this.$route.params.id)
+        axios.get('https://pego149.pythonanywhere.com/api/miestnost/' + this.$route.params.id)
           .then((resp) => {
             this.miestnost = resp.data
           })
       },
       odosliSpravu() {
-        axios.post('api/posts/', {
+        axios.post('https://pego149.pythonanywhere.com/api/posts/', {
           odosielatel: this.$store.getters.loggedInUsername,
           miestnost: this.miestnost[0].miestnost,
           sprava: this.sprava
