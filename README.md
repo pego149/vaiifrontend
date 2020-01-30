@@ -1,4 +1,7 @@
 # vaiifrontend
+## Live verzia
+https://pego149.github.io/pokec/
+
 
 ## Project setup
 ```
